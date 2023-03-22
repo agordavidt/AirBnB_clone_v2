@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """This is the file storage class for AirBnB"""
 import json
 from models.base_model import BaseModel
@@ -64,10 +65,12 @@ class FileStorage:
                 for key, value in (json.load(f)).items():
                     value = eval(value["__class__"])(**value)
                     self.__objects[key] = value
+
         except FileNotFoundError:
             pass
 
     def delete(self, obj=None):
+
         """ delete an existing element
         """
         if obj:

@@ -15,10 +15,12 @@ from models.amenity import Amenity
 
 class DBStorage:
     """ create tables in environmental"""
+
     __engine = None
     __session = None
 
     def __init__(self):
+
         user = getenv("HBNB_MYSQL_USER")
         passwd = getenv("HBNB_MYSQL_PWD")
         db = getenv("HBNB_MYSQL_DB")
@@ -56,15 +58,18 @@ class DBStorage:
 
     def new(self, obj):
         """add a new element in the table
+
         """
         self.__session.add(obj)
 
     def save(self):
+
         """save changes
         """
         self.__session.commit()
 
     def delete(self, obj=None):
+
         """delete an element in the table
         """
         if obj:
@@ -82,3 +87,4 @@ class DBStorage:
         """ calls remove()
         """
         self.__session.close()
+

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """This is the state class"""
 from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
@@ -33,3 +34,4 @@ class State(BaseModel, Base):
             if (elem.state_id == self.id):
                 result.append(elem)
         return (result)
+

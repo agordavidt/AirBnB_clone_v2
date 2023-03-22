@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-"""This is the base model class for AirBnB"""
+
+"""This module defines the base model class for all AirBnB clone"""
 from sqlalchemy.ext.declarative import declarative_base
 import uuid
 import models
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, DateTime
 
-
 Base = declarative_base()
 
 
 class BaseModel:
+
     """This class will defines all common attributes/methods
     for other classes
     """
