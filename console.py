@@ -56,7 +56,7 @@ class HBNBCommand(cmd.Cmd):
                         kv[1] = kv[1].replace('\\', '')
                 try:
                     kv[1] = eval(kv[1])
-                except:
+                except Exception as e:
                     pass
                 if len(kv) == 2:
                     dic[kv[0]] = kv[1]
